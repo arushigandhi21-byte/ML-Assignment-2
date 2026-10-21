@@ -1,0 +1,69 @@
+bagging tree: {'max_depth': None, 'min_samples_leaf': 4}; boosting weak learner depth: 3
+
+model        M  train    val   test   fit s s/learner leaves
+boosting    25  0.350  0.188  0.175    3.33    0.1330    5.9
+bagging     25  1.000  0.775  0.825   13.97    0.5589   40.9
+boosting    50  0.829  0.325  0.250    6.65    0.1330    5.9
+bagging     50  1.000  0.787  0.838   28.35    0.5670   40.8
+boosting   100  0.883  0.325  0.287   13.35    0.1335    5.9
+bagging    100  1.000  0.800  0.838   56.34    0.5634   40.6
+
+heaviest face: train index 219, identity 36, dataset index 360, peak weight 0.0647 = 15.5x uniform (round 19)
+learners correct on it: 5/50; average face: 5.4/50; rank of this face by #correct learners: 10 of 240 (1 = fewest)
+
+round | weight before (x uniform) | learner prediction | right? | ensemble prediction after round
+    1 |     1.00 | id0   | no  | id0
+    2 |     1.08 | id2   | no  | id2
+    3 |     1.18 | id3   | no  | id3
+    4 |     1.31 | id4   | no  | id4
+    5 |     1.47 | id36  | yes | id36
+    6 |     0.25 | id9   | no  | id9
+    7 |     0.29 | id14  | no  | id14
+    8 |     0.36 | id15  | no  | id15
+    9 |     0.50 | id17  | no  | id17
+   10 |     0.76 | id1   | no  | id1
+   11 |     1.28 | id2   | no  | id2
+   12 |     1.54 | id39  | no  | id2
+   13 |     1.89 | id3   | no  | id3
+   14 |     2.39 | id33  | no  | id3
+   15 |     3.09 | id8   | no  | id3
+   16 |     4.08 | id4   | no  | id4
+   17 |     5.63 | id15  | no  | id15
+   18 |     7.82 | id22  | no  | id15
+   19 |    10.78 | id12  | no  | id15
+   20 |    15.53 | id36  | yes | id15
+   21 |     1.45 | id2   | no  | id2
+   22 |     1.90 | id3   | no  | id3
+   23 |     2.49 | id8   | no  | id3
+   24 |     3.18 | id34  | no  | id3
+   25 |     4.19 | id4   | no  | id4
+   26 |     5.62 | id9   | no  | id4
+   27 |     7.91 | id22  | no  | id4
+   28 |    10.66 | id36  | yes | id4
+   29 |     1.06 | id20  | no  | id4
+   30 |     1.32 | id12  | no  | id4
+   31 |     1.66 | id3   | no  | id3
+   32 |     2.08 | id24  | no  | id3
+   33 |     2.66 | id8   | no  | id3
+   34 |     3.46 | id34  | no  | id3
+   35 |     4.61 | id4   | no  | id4
+   36 |     6.12 | id14  | no  | id4
+   37 |     8.07 | id39  | no  | id4
+   38 |    10.34 | id36  | yes | id4
+   39 |     1.25 | id20  | no  | id4
+   40 |     1.60 | id12  | no  | id4
+   41 |     2.05 | id3   | no  | id3
+   42 |     2.72 | id17  | no  | id3
+   43 |     3.53 | id16  | no  | id3
+   44 |     4.44 | id34  | no  | id3
+   45 |     5.61 | id4   | no  | id4
+   46 |     7.17 | id14  | no  | id4
+   47 |     9.00 | id36  | yes | id4
+   48 |     1.07 | id22  | no  | id4
+   49 |     1.37 | id20  | no  | id4
+   50 |     1.81 | id15  | no  | id4
+when wrong, learners predict: [(3, 5), (4, 5), (14, 3), (22, 3), (2, 3)]
+exp(alpha_t) range over rounds: 4.3 - 28.5 (weight of a missed face is multiplied by this before renormalising)
+same identity (train idx [216, 217, 218, 219, 220, 221]): peak weights x uniform [1.5, 1.5, 1.5, 15.5, 1.5, 1.5], learners correct [6, 6, 7, 5, 9, 7]
+rounds where a learner gets it right: [5, 20, 28, 38, 47]
+figures -> q2c_boost_vs_bag.png, q2c_heavy_face.png

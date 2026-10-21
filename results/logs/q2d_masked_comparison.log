@@ -1,0 +1,22 @@
+tree {'max_depth': None, 'min_samples_leaf': 4} | bagging B=200 | boosting depth=3 rounds=50
+
+model     clean acc masked acc clean conf masked conf   drop
+tree          0.600      0.163      0.995       1.000  0.438
+bag           0.875      0.625      0.374       0.273  0.250
+boost         0.250      0.275      0.103       0.097 -0.025
+
+both right on clean: bagging survives mask but boosting breaks: [2, 3, 42, 43, 54]
+both right on clean: boosting survives mask but bagging breaks: [74, 79]
+  test#2 id1: bag true share 0.420 -> 0.355; boost true q 0.102 -> 0.102
+  test#3 id1: bag true share 0.450 -> 0.375; boost true q 0.102 -> 0.102
+  test#42 id21: bag true share 0.540 -> 0.360; boost true q 0.101 -> 0.015
+  test#43 id21: bag true share 0.455 -> 0.285; boost true q 0.124 -> 0.038
+  test#54 id27: bag true share 0.490 -> 0.285; boost true q 0.108 -> 0.088
+  test#74 id37: bag true share 0.360 -> 0.185; boost true q 0.110 -> 0.110
+  test#79 id39: bag true share 0.250 -> 0.140; boost true q 0.127 -> 0.127
+
+CHOSEN face: test#54, identity 27, dataset index 270
+bagging: {'votes_true_clean': 98, 'votes_true_masked': 57, 'pred_clean': 27, 'pred_masked': 27, 'top_masked': [(27, 57), (33, 38), (3, 20), (13, 19)], 'frac_trees_path_uses_mask': 0.625, 'frac_trees_changed': 0.515, 'frac_changed_given_uses_mask': 0.824, 'frac_changed_given_not': 0.0, 'trees_right_clean': 98, 'trees_right_masked': 57, 'right_trees_lost': 42, 'right_trees_gained': 1, 'disagreement_clean': np.float64(0.7440201005025125), 'disagreement_masked': np.float64(0.8547236180904523)}
+boosting: {'q_true_clean': 0.10782854237709197, 'q_true_masked': 0.08761530734090424, 'pred_clean': 27, 'pred_masked': 3, 'top_masked': [(3, 0.104), (27, 0.088), (20, 0.082), (8, 0.077)], 'n_learners_true_clean': 5, 'n_learners_true_masked': 4, 'alpha_true_clean': 13.404395662591494, 'alpha_true_masked': 10.891645382628706, 'learners_for_true_clean': [9, 19, 28, 38, 48], 'learners_for_true_masked': [9, 19, 28, 38], 'frac_learners_path_uses_mask': 0.22, 'frac_learners_changed': 0.14, 'alpha_share_of_changed_learners': 0.1462987506014474, 'uniform_identity_weight': 0.025, 'identity_weight_when_true_voters_fit': [0.086, 0.085, 0.064, 0.062, 0.067], 'true_voters_path_uses_mask': [False, False, False, False, True], 'mean_identity_weight_all_rounds': 0.03031595265623137}
+fraction of split nodes testing a masked pixel: {'mask_area_fraction': 0.0625, 'tree': 0.07692307692307693, 'bagging': 0.06383643112596825, 'boosting_alpha_weighted': 0.07236663353260869}
+figure -> q2d_masked_face.png

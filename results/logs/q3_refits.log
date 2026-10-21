@@ -1,0 +1,35 @@
+frozen: tree {'max_depth': None, 'min_samples_leaf': 4}, bagging B=200, boosting depth=3 rounds=50
+depth study: depths [2, 4, 8, 16, None], min_samples_leaf=4, bagging with 100 trees
+distinct original training faces per resampled set: mean 160.2 of 240 (theory 240*(1-(5/6)^6) = 159.6)
+rep  1/30:  41.4s | clean acc tree 0.438 bag 0.738 boost 0.138 | rounds fitted 50
+rep  2/30:  48.8s | clean acc tree 0.425 bag 0.787 boost 0.100 | rounds fitted 50
+rep  3/30:  38.5s | clean acc tree 0.425 bag 0.762 boost 0.100 | rounds fitted 50
+rep  4/30:  39.7s | clean acc tree 0.463 bag 0.838 boost 0.138 | rounds fitted 50
+rep  5/30:  39.4s | clean acc tree 0.400 bag 0.775 boost 0.225 | rounds fitted 50
+rep  6/30:  41.0s | clean acc tree 0.512 bag 0.787 boost 0.212 | rounds fitted 50
+rep  7/30:  41.6s | clean acc tree 0.463 bag 0.700 boost 0.188 | rounds fitted 50
+rep  8/30:  41.7s | clean acc tree 0.475 bag 0.775 boost 0.113 | rounds fitted 50
+rep  9/30:  45.3s | clean acc tree 0.487 bag 0.738 boost 0.200 | rounds fitted 50
+rep 10/30:  44.8s | clean acc tree 0.425 bag 0.787 boost 0.175 | rounds fitted 50
+rep 11/30:  37.8s | clean acc tree 0.450 bag 0.812 boost 0.212 | rounds fitted 50
+rep 12/30:  38.0s | clean acc tree 0.475 bag 0.775 boost 0.188 | rounds fitted 50
+rep 13/30:  39.6s | clean acc tree 0.388 bag 0.775 boost 0.138 | rounds fitted 50
+rep 14/30:  39.8s | clean acc tree 0.463 bag 0.787 boost 0.125 | rounds fitted 50
+rep 15/30:  41.4s | clean acc tree 0.512 bag 0.800 boost 0.175 | rounds fitted 50
+rep 16/30:  45.0s | clean acc tree 0.550 bag 0.838 boost 0.138 | rounds fitted 50
+rep 17/30:  46.5s | clean acc tree 0.512 bag 0.787 boost 0.163 | rounds fitted 50
+rep 18/30:  40.9s | clean acc tree 0.350 bag 0.738 boost 0.225 | rounds fitted 50
+rep 19/30:  37.7s | clean acc tree 0.463 bag 0.850 boost 0.200 | rounds fitted 50
+rep 20/30:  39.5s | clean acc tree 0.487 bag 0.775 boost 0.150 | rounds fitted 50
+rep 21/30:  40.0s | clean acc tree 0.412 bag 0.800 boost 0.150 | rounds fitted 50
+rep 22/30:  43.2s | clean acc tree 0.438 bag 0.775 boost 0.138 | rounds fitted 50
+rep 23/30:  45.9s | clean acc tree 0.525 bag 0.812 boost 0.150 | rounds fitted 50
+rep 24/30:  46.2s | clean acc tree 0.463 bag 0.738 boost 0.113 | rounds fitted 50
+rep 25/30:  47.9s | clean acc tree 0.550 bag 0.825 boost 0.175 | rounds fitted 50
+rep 26/30:  38.4s | clean acc tree 0.425 bag 0.775 boost 0.188 | rounds fitted 50
+rep 27/30:  39.0s | clean acc tree 0.463 bag 0.662 boost 0.138 | rounds fitted 50
+rep 28/30:  45.3s | clean acc tree 0.500 bag 0.775 boost 0.100 | rounds fitted 50
+rep 29/30:  49.5s | clean acc tree 0.575 bag 0.800 boost 0.113 | rounds fitted 50
+rep 30/30:  50.1s | clean acc tree 0.525 bag 0.838 boost 0.325 | rounds fitted 50
+total 1274s
+saved results/q3_probs.npz and results/q3_struct.json

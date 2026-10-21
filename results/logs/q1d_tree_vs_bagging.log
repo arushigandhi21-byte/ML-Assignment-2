@@ -1,0 +1,47 @@
+frozen tree: {'max_depth': None, 'min_samples_leaf': 4}, final bagging B = 200
+
+set     tree acc  bag acc tree conf  bag conf  tree conf ok/wrong  bag conf ok/wrong  fix break  both
+clean      0.600    0.875     0.995     0.374     0.997/0.991     0.394/0.230   22     0    10
+        mean accuracy of an individual bootstrap tree: 0.355
+masked     0.163    0.625     1.000     0.273     1.000/1.000     0.320/0.193   37     0    30
+        mean accuracy of an individual bootstrap tree: 0.239
+
+ALL clean faces where bagging fixes the tree:
+  test#5 (dataset idx 29) true id2 | tree -> id22 (conf 0.86) | bagging -> id2 with votes [id2:38, id12:19, id3:15, id27:14] | votes for true id 38/200 | fraction of trees correct 0.190
+  test#6 (dataset idx 37) true id3 | tree -> id39 (conf 1.00) | bagging -> id3 with votes [id3:40, id37:24, id20:16, id22:11] | votes for true id 40/200 | fraction of trees correct 0.200
+  test#8 (dataset idx 42) true id4 | tree -> id37 (conf 1.00) | bagging -> id4 with votes [id4:26, id30:26, id8:13, id2:12] | votes for true id 26/200 | fraction of trees correct 0.130
+  test#17 (dataset idx 88) true id8 | tree -> id29 (conf 1.00) | bagging -> id8 with votes [id8:74, id29:20, id37:14, id4:13] | votes for true id 74/200 | fraction of trees correct 0.370
+  test#20 (dataset idx 100) true id10 | tree -> id9 (conf 1.00) | bagging -> id10 with votes [id10:86, id31:21, id15:13, id9:9] | votes for true id 86/200 | fraction of trees correct 0.430
+  test#23 (dataset idx 117) true id11 | tree -> id25 (conf 1.00) | bagging -> id11 with votes [id11:48, id37:26, id25:23, id4:23] | votes for true id 48/200 | fraction of trees correct 0.240
+  test#24 (dataset idx 129) true id12 | tree -> id39 (conf 1.00) | bagging -> id12 with votes [id12:89, id4:14, id27:9, id3:9] | votes for true id 89/200 | fraction of trees correct 0.445
+  test#26 (dataset idx 137) true id13 | tree -> id16 (conf 1.00) | bagging -> id13 with votes [id13:27, id2:21, id33:19, id3:15] | votes for true id 27/200 | fraction of trees correct 0.135
+  test#27 (dataset idx 138) true id13 | tree -> id3 (conf 1.00) | bagging -> id13 with votes [id13:55, id3:12, id9:11, id33:10] | votes for true id 55/200 | fraction of trees correct 0.275
+  test#34 (dataset idx 170) true id17 | tree -> id24 (conf 1.00) | bagging -> id17 with votes [id17:89, id7:17, id39:15, id9:15] | votes for true id 89/200 | fraction of trees correct 0.445
+  test#35 (dataset idx 178) true id17 | tree -> id22 (conf 0.86) | bagging -> id17 with votes [id17:112, id7:18, id39:15, id9:9] | votes for true id 112/200 | fraction of trees correct 0.560
+  test#36 (dataset idx 189) true id18 | tree -> id3 (conf 1.00) | bagging -> id18 with votes [id18:119, id3:11, id31:11, id4:6] | votes for true id 119/200 | fraction of trees correct 0.595
+  test#40 (dataset idx 201) true id20 | tree -> id13 (conf 1.00) | bagging -> id20 with votes [id20:46, id34:19, id8:17, id30:9] | votes for true id 46/200 | fraction of trees correct 0.230
+  test#45 (dataset idx 220) true id22 | tree -> id37 (conf 1.00) | bagging -> id22 with votes [id22:59, id24:21, id3:16, id37:14] | votes for true id 59/200 | fraction of trees correct 0.295
+  test#48 (dataset idx 241) true id24 | tree -> id39 (conf 1.00) | bagging -> id24 with votes [id24:47, id30:21, id14:18, id25:12] | votes for true id 47/200 | fraction of trees correct 0.235
+  test#54 (dataset idx 270) true id27 | tree -> id3 (conf 1.00) | bagging -> id27 with votes [id27:98, id25:16, id12:14, id20:8] | votes for true id 98/200 | fraction of trees correct 0.490
+  test#60 (dataset idx 308) true id30 | tree -> id20 (conf 1.00) | bagging -> id30 with votes [id30:45, id12:29, id20:22, id23:9] | votes for true id 45/200 | fraction of trees correct 0.225
+  test#68 (dataset idx 342) true id34 | tree -> id20 (conf 1.00) | bagging -> id34 with votes [id34:69, id8:38, id29:25, id2:10] | votes for true id 69/200 | fraction of trees correct 0.345
+  test#69 (dataset idx 345) true id34 | tree -> id17 (conf 1.00) | bagging -> id34 with votes [id34:53, id20:24, id4:15, id14:11] | votes for true id 53/200 | fraction of trees correct 0.265
+  test#71 (dataset idx 359) true id35 | tree -> id27 (conf 1.00) | bagging -> id35 with votes [id35:37, id31:25, id11:12, id4:11] | votes for true id 37/200 | fraction of trees correct 0.185
+  test#73 (dataset idx 366) true id36 | tree -> id25 (conf 1.00) | bagging -> id36 with votes [id36:43, id2:41, id25:28, id27:18] | votes for true id 43/200 | fraction of trees correct 0.215
+  test#79 (dataset idx 398) true id39 | tree -> id0 (conf 1.00) | bagging -> id39 with votes [id39:50, id17:46, id0:30, id20:13] | votes for true id 50/200 | fraction of trees correct 0.250
+ALL clean faces where both are wrong:
+  test#0 (dataset idx 4) true id0 | tree -> id1 (conf 1.00) | bagging -> id1 with votes [id1:62, id0:36, id17:24, id9:21] | votes for true id 36/200 | fraction of trees correct 0.180
+  test#1 (dataset idx 1) true id0 | tree -> id25 (conf 1.00) | bagging -> id30 with votes [id30:33, id1:27, id15:21, id25:18] | votes for true id 7/200 | fraction of trees correct 0.035
+  test#18 (dataset idx 95) true id9 | tree -> id7 (conf 1.00) | bagging -> id26 with votes [id26:32, id9:22, id7:18, id25:17] | votes for true id 22/200 | fraction of trees correct 0.110
+  test#19 (dataset idx 98) true id9 | tree -> id34 (conf 1.00) | bagging -> id24 with votes [id24:25, id39:17, id17:14, id8:14] | votes for true id 2/200 | fraction of trees correct 0.010
+  test#25 (dataset idx 127) true id12 | tree -> id13 (conf 1.00) | bagging -> id23 with votes [id23:27, id27:21, id12:19, id39:14] | votes for true id 19/200 | fraction of trees correct 0.095
+  test#30 (dataset idx 155) true id15 | tree -> id28 (conf 1.00) | bagging -> id35 with votes [id35:68, id23:35, id6:15, id15:15] | votes for true id 15/200 | fraction of trees correct 0.075
+  test#31 (dataset idx 154) true id15 | tree -> id5 (conf 1.00) | bagging -> id35 with votes [id35:70, id5:39, id6:20, id17:18] | votes for true id 10/200 | fraction of trees correct 0.050
+  test#39 (dataset idx 198) true id19 | tree -> id39 (conf 1.00) | bagging -> id17 with votes [id17:35, id19:32, id20:17, id22:15] | votes for true id 32/200 | fraction of trees correct 0.160
+  test#50 (dataset idx 256) true id25 | tree -> id9 (conf 1.00) | bagging -> id15 with votes [id15:42, id22:24, id2:16, id0:11] | votes for true id 7/200 | fraction of trees correct 0.035
+  test#51 (dataset idx 255) true id25 | tree -> id16 (conf 1.00) | bagging -> id2 with votes [id2:66, id27:19, id3:15, id25:11] | votes for true id 11/200 | fraction of trees correct 0.055
+
+shown in report  corrected: [np.int64(36), np.int64(35)]  both wrong: [np.int64(19), np.int64(1)]
+tree: correct on clean but wrong on masked = 35
+bagging: correct on clean but wrong on masked = 20
+figures -> q1d_cases.png, q1d_confidence.png

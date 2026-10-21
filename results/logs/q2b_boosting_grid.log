@@ -1,0 +1,29 @@
+K = 40, random-guess error = 1 - 1/K = 0.9750, log(K-1) = 3.6636
+depth 1: fitted 100 rounds, eps range 0.883-0.950, alpha range 0.719-1.643, events: none
+depth 2: fitted 100 rounds, eps range 0.713-0.925, alpha range 1.151-2.753, events: none
+depth 3: fitted 100 rounds, eps range 0.578-0.900, alpha range 1.466-3.349, events: none
+depth 4: fitted 100 rounds, eps range 0.364-0.875, alpha range 1.718-4.222, events: none
+
+depth rounds  train    val   test
+    1     10  0.050  0.050  0.025
+    1     25  0.067  0.037  0.050
+    1     50  0.117  0.075  0.075
+    1    100  0.133  0.087  0.113
+    2     10  0.100  0.100  0.075
+    2     25  0.154  0.138  0.100
+    2     50  0.308  0.150  0.150
+    2    100  0.375  0.250  0.225
+    3     10  0.233  0.125  0.113
+    3     25  0.350  0.188  0.175
+    3     50  0.829  0.325  0.250
+    3    100  0.883  0.325  0.287
+    4     10  0.275  0.113  0.175
+    4     25  0.287  0.100  0.087
+    4     50  0.496  0.237  0.138
+    4    100  0.758  0.237  0.250
+
+val ties at best: [(3, 50), (3, 100)]
+SELECTED: depth = 3, rounds = 50 (val 0.3250, train 0.8292, test 0.2500)
+selected model dynamics: eps first/last 0.900/0.748, alpha first/last 1.466/2.578, max weight start/end 0.0042/0.0245 (uniform = 0.0042), top-10 weight start/end 0.042/0.194
+10 heaviest training images at the end (train index, identity, weight): [(163, 27, 0.0245), (103, 17, 0.0222), (96, 16, 0.022), (106, 17, 0.0195), (72, 12, 0.0182), (73, 12, 0.0182), (74, 12, 0.0182), (75, 12, 0.0182), (76, 12, 0.0182), (14, 2, 0.0149)]
+figures -> q2b_grid.png, q2b_dynamics.png

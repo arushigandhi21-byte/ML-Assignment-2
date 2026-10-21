@@ -1,0 +1,6 @@
+depth ids/tree true id nameable member acc ensemble ids ensemble acc
+    2      3.1            0.077      0.058           13        0.188
+    4      5.2            0.131      0.090           13        0.263
+    8     10.0            0.249      0.143           24        0.487
+   16     20.0            0.501      0.248           35        0.762
+ None     36.2            0.906      0.354           37        0.838

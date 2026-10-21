@@ -1,0 +1,26 @@
+Toy data (9 samples, 3 classes)
+stump split: feature x1 <= 2.00
+
+ i   x1   x2  y   w_init  h1(x)  wrong  w*exp(a*wrong)    w_new
+ 0  1.0  2.0  0   0.1111      0      0          0.1111   0.0556
+ 1  1.3  1.0  0   0.1111      0      0          0.1111   0.0556
+ 2  1.6  3.0  0   0.1111      0      0          0.1111   0.0556
+ 3  2.4  2.5  1   0.1111      1      0          0.1111   0.0556
+ 4  2.8  1.5  1   0.1111      1      0          0.1111   0.0556
+ 5  3.1  3.5  1   0.1111      1      0          0.1111   0.0556
+ 6  3.6  1.0  2   0.1111      1      1          0.4444   0.2222
+ 7  4.0  3.0  2   0.1111      1      1          0.4444   0.2222
+ 8  4.4  2.0  2   0.1111      1      1          0.4444   0.2222
+
+weighted error eps = sum of w over wrong samples = 0.3333
+alpha = log((1-eps)/eps) + log(K-1) = log(2.0000) + log(2) = 1.3863
+exp(alpha) = 4.0000  -> each wrong sample's weight is multiplied by this
+normaliser Z = 2.0000; new weights: correct = 0.0556, wrong = 0.2222
+after the update the wrong samples carry 0.6667 of the total weight = (K-1)/K = 0.6667 (holds for every SAMME round)
+
+(round 2 for context) split: x1 <= 3.35, predictions [0, 0, 0, 0, 0, 0, 2, 2, 2], eps = 0.1667, alpha = 2.3026
+
+not-better-than-random check: a learner with eps = 1.0000 >= 1 - 1/K = 0.6667 -> status 'rejected', weights unchanged = True
+borderline learner with eps = 0.6667 -> status 'rejected'
+
+SAMME class reproduces this round exactly (same samme_update function).

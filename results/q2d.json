@@ -1,0 +1,137 @@
+{
+  "summary": {
+    "tree": {
+      "clean_acc": 0.6,
+      "clean_conf": 0.9946428571428573,
+      "masked_acc": 0.1625,
+      "masked_conf": 1.0
+    },
+    "bag": {
+      "clean_acc": 0.875,
+      "clean_conf": 0.3738125,
+      "masked_acc": 0.625,
+      "masked_conf": 0.272625
+    },
+    "boost": {
+      "clean_acc": 0.25,
+      "clean_conf": 0.10287216450085208,
+      "masked_acc": 0.275,
+      "masked_conf": 0.09727912932706315
+    }
+  },
+  "typeA_bag_survives": [
+    2,
+    3,
+    42,
+    43,
+    54
+  ],
+  "typeB_boost_survives": [
+    74,
+    79
+  ],
+  "chosen_face": 54,
+  "true_id": 27,
+  "details": {
+    "bagging": {
+      "votes_true_clean": 98,
+      "votes_true_masked": 57,
+      "pred_clean": 27,
+      "pred_masked": 27,
+      "top_masked": [
+        [
+          27,
+          57
+        ],
+        [
+          33,
+          38
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          13,
+          19
+        ]
+      ],
+      "frac_trees_path_uses_mask": 0.625,
+      "frac_trees_changed": 0.515,
+      "frac_changed_given_uses_mask": 0.824,
+      "frac_changed_given_not": 0.0,
+      "trees_right_clean": 98,
+      "trees_right_masked": 57,
+      "right_trees_lost": 42,
+      "right_trees_gained": 1,
+      "disagreement_clean": 0.7440201005025125,
+      "disagreement_masked": 0.8547236180904523
+    },
+    "boosting": {
+      "q_true_clean": 0.10782854237709197,
+      "q_true_masked": 0.08761530734090424,
+      "pred_clean": 27,
+      "pred_masked": 3,
+      "top_masked": [
+        [
+          3,
+          0.104
+        ],
+        [
+          27,
+          0.088
+        ],
+        [
+          20,
+          0.082
+        ],
+        [
+          8,
+          0.077
+        ]
+      ],
+      "n_learners_true_clean": 5,
+      "n_learners_true_masked": 4,
+      "alpha_true_clean": 13.404395662591494,
+      "alpha_true_masked": 10.891645382628706,
+      "learners_for_true_clean": [
+        9,
+        19,
+        28,
+        38,
+        48
+      ],
+      "learners_for_true_masked": [
+        9,
+        19,
+        28,
+        38
+      ],
+      "frac_learners_path_uses_mask": 0.22,
+      "frac_learners_changed": 0.14,
+      "alpha_share_of_changed_learners": 0.1462987506014474,
+      "uniform_identity_weight": 0.025,
+      "identity_weight_when_true_voters_fit": [
+        0.086,
+        0.085,
+        0.064,
+        0.062,
+        0.067
+      ],
+      "true_voters_path_uses_mask": [
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "mean_identity_weight_all_rounds": 0.03031595265623137
+    },
+    "model_mask_reliance": {
+      "mask_area_fraction": 0.0625,
+      "tree": 0.07692307692307693,
+      "bagging": 0.06383643112596825,
+      "boosting_alpha_weighted": 0.07236663353260869
+    }
+  }
+}

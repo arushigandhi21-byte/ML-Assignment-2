@@ -1,0 +1,42 @@
+[
+  {
+    "depth": "2",
+    "ids_per_tree": 3.07,
+    "true_id_nameable": 0.07674999999999998,
+    "member_acc": 0.057625,
+    "ensemble_ids": 13,
+    "ensemble_acc": 0.1875
+  },
+  {
+    "depth": "4",
+    "ids_per_tree": 5.25,
+    "true_id_nameable": 0.13125,
+    "member_acc": 0.089625,
+    "ensemble_ids": 13,
+    "ensemble_acc": 0.2625
+  },
+  {
+    "depth": "8",
+    "ids_per_tree": 9.97,
+    "true_id_nameable": 0.24925000000000005,
+    "member_acc": 0.142875,
+    "ensemble_ids": 24,
+    "ensemble_acc": 0.4875
+  },
+  {
+    "depth": "16",
+    "ids_per_tree": 20.03,
+    "true_id_nameable": 0.5007500000000001,
+    "member_acc": 0.247875,
+    "ensemble_ids": 35,
+    "ensemble_acc": 0.7625
+  },
+  {
+    "depth": "None",
+    "ids_per_tree": 36.25,
+    "true_id_nameable": 0.90625,
+    "member_acc": 0.354375,
+    "ensemble_ids": 37,
+    "ensemble_acc": 0.8375
+  }
+]

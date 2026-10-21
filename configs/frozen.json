@@ -1,0 +1,61 @@
+{
+  "roll_number": "M24MA2001",
+  "seed": 242001,
+  "split": {
+    "file": "results/split.npz",
+    "per_identity": {
+      "train": 6,
+      "val": 2,
+      "test": 2
+    },
+    "sizes": {
+      "train": 240,
+      "val": 80,
+      "test": 80
+    }
+  },
+  "features": "raw flattened 64x64 pixels (4096), no dimensionality reduction",
+  "mask": {
+    "rows": [
+      24,
+      39
+    ],
+    "cols": [
+      24,
+      39
+    ],
+    "value": 0.0
+  },
+  "single_tree": {
+    "max_depth": null,
+    "min_samples_leaf": 4,
+    "selection": "max val_acc, ties -> fewer leaves"
+  },
+  "bagging": {
+    "n_trees": 200,
+    "tree": {
+      "max_depth": null,
+      "min_samples_leaf": 4
+    },
+    "bootstrap_size": 240,
+    "selection": "max val_acc, ties -> smaller B"
+  },
+  "boosting": {
+    "algorithm": "SAMME (own implementation)",
+    "max_depth": 3,
+    "rounds": 50,
+    "not_better_than_random": "eps >= 1-1/K -> reject, refit once with new seed, then stop",
+    "selection": "max val_acc, ties -> smaller depth, fewer rounds"
+  },
+  "bias_variance": {
+    "repetitions": 30,
+    "depth_study": [
+      "2",
+      "4",
+      "8",
+      "16",
+      "None"
+    ],
+    "bagging_trees_in_depth_study": 100
+  }
+}

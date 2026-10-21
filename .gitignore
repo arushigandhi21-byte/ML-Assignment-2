@@ -1,0 +1,11 @@
+.venv/
+data/
+__pycache__/
+*.pyc
+.DS_Store
+RULES.md
+STATUS.md
+ML_Assignment_2_new.pdf
+report/build/
+report/
+M24MA2001_Arushi_Gandhi_ML_Assignment2*

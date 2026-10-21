@@ -1,0 +1,185 @@
+{
+  "grid": [
+    {
+      "max_depth": 2,
+      "min_samples_leaf": 1,
+      "train_acc": 0.075,
+      "val_acc": 0.05,
+      "test_acc": 0.05,
+      "n_leaves": 3,
+      "mean_samples_per_leaf": 80.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 2
+    },
+    {
+      "max_depth": 2,
+      "min_samples_leaf": 2,
+      "train_acc": 0.075,
+      "val_acc": 0.05,
+      "test_acc": 0.05,
+      "n_leaves": 3,
+      "mean_samples_per_leaf": 80.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 2
+    },
+    {
+      "max_depth": 2,
+      "min_samples_leaf": 4,
+      "train_acc": 0.075,
+      "val_acc": 0.05,
+      "test_acc": 0.05,
+      "n_leaves": 3,
+      "mean_samples_per_leaf": 80.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 2
+    },
+    {
+      "max_depth": 4,
+      "min_samples_leaf": 1,
+      "train_acc": 0.125,
+      "val_acc": 0.0875,
+      "test_acc": 0.1,
+      "n_leaves": 5,
+      "mean_samples_per_leaf": 48.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 4
+    },
+    {
+      "max_depth": 4,
+      "min_samples_leaf": 2,
+      "train_acc": 0.125,
+      "val_acc": 0.0875,
+      "test_acc": 0.1,
+      "n_leaves": 5,
+      "mean_samples_per_leaf": 48.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 4
+    },
+    {
+      "max_depth": 4,
+      "min_samples_leaf": 4,
+      "train_acc": 0.125,
+      "val_acc": 0.0875,
+      "test_acc": 0.1,
+      "n_leaves": 5,
+      "mean_samples_per_leaf": 48.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 4
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 1,
+      "train_acc": 0.225,
+      "val_acc": 0.1875,
+      "test_acc": 0.175,
+      "n_leaves": 9,
+      "mean_samples_per_leaf": 26.666666666666668,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 8
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 2,
+      "train_acc": 0.225,
+      "val_acc": 0.1875,
+      "test_acc": 0.175,
+      "n_leaves": 9,
+      "mean_samples_per_leaf": 26.666666666666668,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 8
+    },
+    {
+      "max_depth": 8,
+      "min_samples_leaf": 4,
+      "train_acc": 0.225,
+      "val_acc": 0.1875,
+      "test_acc": 0.175,
+      "n_leaves": 9,
+      "mean_samples_per_leaf": 26.666666666666668,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 8
+    },
+    {
+      "max_depth": 16,
+      "min_samples_leaf": 1,
+      "train_acc": 0.45,
+      "val_acc": 0.2625,
+      "test_acc": 0.325,
+      "n_leaves": 18,
+      "mean_samples_per_leaf": 13.333333333333334,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 16
+    },
+    {
+      "max_depth": 16,
+      "min_samples_leaf": 2,
+      "train_acc": 0.45,
+      "val_acc": 0.2625,
+      "test_acc": 0.325,
+      "n_leaves": 18,
+      "mean_samples_per_leaf": 13.333333333333334,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 16
+    },
+    {
+      "max_depth": 16,
+      "min_samples_leaf": 4,
+      "train_acc": 0.45,
+      "val_acc": 0.2625,
+      "test_acc": 0.325,
+      "n_leaves": 18,
+      "mean_samples_per_leaf": 13.333333333333334,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 16
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 1,
+      "train_acc": 1.0,
+      "val_acc": 0.5375,
+      "test_acc": 0.6,
+      "n_leaves": 41,
+      "mean_samples_per_leaf": 5.853658536585366,
+      "frac_single_sample_leaves": 0.024390243902439025,
+      "depth": 31
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 2,
+      "train_acc": 0.9958333333333333,
+      "val_acc": 0.5375,
+      "test_acc": 0.6,
+      "n_leaves": 41,
+      "mean_samples_per_leaf": 5.853658536585366,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 31
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 4,
+      "train_acc": 0.9958333333333333,
+      "val_acc": 0.5375,
+      "test_acc": 0.6,
+      "n_leaves": 40,
+      "mean_samples_per_leaf": 6.0,
+      "frac_single_sample_leaves": 0.0,
+      "depth": 31
+    }
+  ],
+  "selected": {
+    "max_depth": null,
+    "min_samples_leaf": 4
+  },
+  "selected_row": {
+    "max_depth": null,
+    "min_samples_leaf": 4,
+    "train_acc": 0.9958333333333333,
+    "val_acc": 0.5375,
+    "test_acc": 0.6,
+    "n_leaves": 40,
+    "mean_samples_per_leaf": 6.0,
+    "frac_single_sample_leaves": 0.0,
+    "depth": 31
+  },
+  "selection_rule": "max val_acc, ties -> fewer leaves"
+}

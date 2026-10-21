@@ -1,0 +1,30 @@
+R = 30 refits, N = 80 clean test images; distinct originals per resample: 160.2/240
+
+(a) model                 bias^2 variance    MSE acc mean acc std flip rate mean max p
+    single tree            0.400    0.664  1.064    0.468   0.052     0.507      1.000
+    bagging (B=200)        0.532    0.021  0.554    0.781   0.041     0.172      0.333
+    boosting (d3, T50)     0.919    0.016  0.935    0.163   0.049     0.738      0.110
+    (MSE = bias^2 + variance checked exactly; flip rate = fraction of (face, refit) whose label differs from that face's most common label)
+
+(b) depth | tree bias2 tree var      tree acc | bag bias2 bag var       bag acc | var removed % removed      acc gain
+        2 |      0.916    0.039  0.059±0.012 |     0.935   0.011  0.139±0.060 |       0.028     71.3% +0.080±0.064
+        4 |      0.876    0.071  0.089±0.016 |     0.897   0.013  0.248±0.063 |       0.058     81.5% +0.159±0.062
+        8 |      0.805    0.132  0.144±0.026 |     0.822   0.016  0.425±0.073 |       0.116     88.2% +0.281±0.071
+       16 |      0.673    0.251  0.250±0.034 |     0.688   0.021  0.611±0.067 |       0.230     91.6% +0.361±0.070
+     None |      0.400    0.664  0.468±0.052 |     0.532   0.025  0.768±0.041 |       0.639     96.3% +0.300±0.049
+
+(c) depth | single tree: leaves depth mean/leaf 1-leaf | bag member: leaves mean/leaf 1-leaf disagree
+        2 |                 3.0   2.0     80.00  0.000 |               3.1     77.29  0.000    0.961
+        4 |                 5.1   4.0     46.93  0.000 |               5.5     44.33  0.000    0.947
+        8 |                 9.2   8.0     26.08  0.000 |              10.4     23.36  0.000    0.926
+       16 |                17.8  16.0     13.50  0.000 |              20.8     11.65  0.000    0.891
+     None |                40.0  33.8      6.00  0.000 |              39.2      6.14  0.000    0.835
+    largest mean bagging accuracy gain at depth 16 (+0.361); deepest (None): +0.300
+    per-refit winner of the largest gain (ties -> shallower): {'2': 0, '4': 0, '8': 4, '16': 21, 'None': 5}
+    gain(depth 16) - gain(None): +0.061 ± 0.077, larger in 24/30 refits (1 ties), paired t-test p = 0.00017, Wilcoxon p = 0.00083
+
+(d) model                    clean acc    masked acc   drop  bias^2 variance | masked:  bias^2 variance | frozen model clean/masked
+    single tree           0.468±0.052  0.240±0.166  0.228   0.400    0.664 |           0.802    0.719 | 0.600/0.163
+    bagging (B=200)       0.781±0.041  0.556±0.130  0.225   0.532    0.021 |           0.695    0.021 | 0.875/0.625
+    boosting (d3, T50)    0.163±0.049  0.166±0.058 -0.003   0.919    0.016 |           0.919    0.018 | 0.250/0.275
+figures -> q3bc_depth.png, q3ad_models.png

@@ -1,0 +1,4 @@
+depth 1: max |alpha_mine - alpha_sklearn| over 100 rounds = 7.11e-15
+depth 2: max |alpha_mine - alpha_sklearn| over 100 rounds = 4.00e-15
+depth 3: max |alpha_mine - alpha_sklearn| over 100 rounds = 3.11e-15
+depth 4: max |alpha_mine - alpha_sklearn| over 100 rounds = 6.22e-15
